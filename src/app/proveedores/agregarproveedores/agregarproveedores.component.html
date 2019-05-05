@@ -21,11 +21,15 @@
       </div>
       <div class="form-group">
         <label for="pais">Pais</label>
-        <input type="text"
-               class="form-control"
-               ngModel
-               name="pais"
-               id="pais">
+        <select class="form-control"
+                id="pais"
+                ngModel
+                name="pais">
+          <option value="">Seleccione un Pais...</option>
+          <option *ngFor="let pais of paises" [value]="pais">
+            {{pais}}
+          </option>
+        </select>
       </div>
       <div class="form-group">
         <label for="email">Correo Electrónico</label>
